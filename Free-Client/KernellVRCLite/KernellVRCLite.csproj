@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A653DBE-B7DF-497D-8A93-0CC3B19A4B05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KernellVRCLite</RootNamespace>
+    <AssemblyName>KernellVRCLite</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony" />
+    <Reference Include="Assembly-CSharp" />
+    <Reference Include="Assembly-CSharp-firstpass" />
+    <Reference Include="DataModel" />
+    <Reference Include="Il2Cppmscorlib" />
+    <Reference Include="Il2CppSystem.Core" />
+    <Reference Include="Localization.LocalizableString" />
+    <Reference Include="MelonLoader" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="Photon-DotNet" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\9.0.6\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UnhollowerBaseLib" />
+    <Reference Include="Unity.InputSystem" />
+    <Reference Include="Unity.TextMeshPro" />
+    <Reference Include="UnityEngine.AnimationModule" />
+    <Reference Include="UnityEngine.AudioModule" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.ImageConversionModule" />
+    <Reference Include="UnityEngine.IMGUIModule" />
+    <Reference Include="UnityEngine.InputLegacyModule" />
+    <Reference Include="UnityEngine.PhysicsModule" />
+    <Reference Include="UnityEngine.SubsystemsModule" />
+    <Reference Include="UnityEngine.TextRenderingModule" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="UnityEngine.UIElementsModule" />
+    <Reference Include="UnityEngine.UIModule" />
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule" />
+    <Reference Include="UnityEngine.UnityWebRequestModule" />
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule" />
+    <Reference Include="UnityEngine.XRModule" />
+    <Reference Include="VRC.Udon" />
+    <Reference Include="VRC.Udon.Common" />
+    <Reference Include="VRC.UI.Core" />
+    <Reference Include="VRC.UI.Elements" />
+    <Reference Include="VRC.UI.Shared" />
+    <Reference Include="VRCCore-Standalone" />
+    <Reference Include="VRCSDK3" />
+    <Reference Include="VRCSDKBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\APIUtils.cs" />
+    <Compile Include="AvatarUtil.cs" />
+    <Compile Include="clicktp.cs" />
+    <Compile Include="Core\Mono\BadgeInfo.cs" />
+    <Compile Include="Core\Mono\CustomNameplate.cs" />
+    <Compile Include="Core\Mono\CustomNameplateAccountAge.cs" />
+    <Compile Include="Core\Mono\CustomNameplateTags.cs" />
+    <Compile Include="Core\Mono\FriendInfo.cs" />
+    <Compile Include="Core\Mono\NameplateController.cs" />
+    <Compile Include="Core\Mono\NameplateRenderer.cs" />
+    <Compile Include="Core\Mono\NameplateState.cs" />
+    <Compile Include="Core\Mono\PlayerStatus.cs" />
+    <Compile Include="Core\Mono\StatusInfo.cs" />
+    <Compile Include="Core\Mono\TagConstants.cs" />
+    <Compile Include="Core\Mono\TagInfo.cs" />
+    <Compile Include="Core\Mono\TagsCacheEntry.cs" />
+    <Compile Include="Core\Mono\TagsController.cs" />
+    <Compile Include="Core\Mono\TagsRenderer.cs" />
+    <Compile Include="Core\Mono\TagsState.cs" />
+    <Compile Include="DefaultNamespace\antiudon.cs" />
+    <Compile Include="Ghost.cs" />
+    <Compile Include="HeadRotate.cs" />
+    <Compile Include="HighlightsFXExtensions.cs" />
+    <Compile Include="JoinWorldById.cs" />
+    <Compile Include="KernelClient\Modules\Target\OptimizedOrbitSystem.cs" />
+    <Compile Include="KernelClient\Modules\Target\OrbitMode.cs" />
+    <Compile Include="KernellClientUI\AssemblyExtensions.cs" />
+    <Compile Include="KernellClientUI\ComponentDisabled.cs" />
+    <Compile Include="KernellClientUI\ComponentPriority.cs" />
+    <Compile Include="KernellClientUI\ConfigValue.cs" />
+    <Compile Include="KernellClientUI\EnumExtensions.cs" />
+    <Compile Include="KernellClientUI\Managers\ConfigManager.cs" />
+    <Compile Include="KernellClientUI\Managers\ResourceManager.cs" />
+    <Compile Include="KernellClientUI\Managers\UiManager.cs" />
+    <Compile Include="KernellClientUI\UI\ActionMenu\ActionMenuAPI.cs" />
+    <Compile Include="KernellClientUI\UI\ActionMenu\ActionMenuButton.cs" />
+    <Compile Include="KernellClientUI\UI\ActionMenu\ActionMenuPage.cs" />
+    <Compile Include="KernellClientUI\UI\ActionMenu\ActionMenuToggle.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\Header\ReMMHeaderButton.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\Header\ReMMHeaderElement.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\ReMMAvatarButton.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\ReMMButton.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\ReMMCategory.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\ReMMCategorySection.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\ReMMOptionSelector.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\ReMMPage.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\ReMMSectionElement.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\ReMMSidebarHeaderButton.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\ReMMSlider.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\ReMMTab.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\ReMMText.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\ReMMToggle.cs" />
+    <Compile Include="KernellClientUI\UI\MainMenu\ReMMUserButton.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ButtonLayoutPreset.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ButtonLayoutShape.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\IButtonPage.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReCategoryPage.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReCategoryToggle.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReIconButton.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReMenuButton.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReMenuButtonContainer.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReMenuCategory.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReMenuDesc.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReMenuHeader.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReMenuHeaderCollapsible.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReMenuPage.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReMenuSlider.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReMenuSliderCategory.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReMenuSliderContainer.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReMenuToggle.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReNewMenuCategory.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReNewMenuContainer.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReNewUIBackground.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReRadioToggle.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReRadioToggleGroup.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReRadioTogglePage.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReTab.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReTabbedPage.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReTabButton.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReTabContents.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\ReToggleSlider.cs" />
+    <Compile Include="KernellClientUI\UI\QuickMenu\StyleElementExtensions.cs" />
+    <Compile Include="KernellClientUI\UI\UiElement.cs" />
+    <Compile Include="KernellClientUI\UI\utils.cs" />
+    <Compile Include="KernellClientUI\UI\Wings\ReMirroredWingButton.cs" />
+    <Compile Include="KernellClientUI\UI\Wings\ReMirroredWingMenu.cs" />
+    <Compile Include="KernellClientUI\UI\Wings\ReMirroredWingToggle.cs" />
+    <Compile Include="KernellClientUI\UI\Wings\ReWingButton.cs" />
+    <Compile Include="KernellClientUI\UI\Wings\ReWingToggle.cs" />
+    <Compile Include="KernellClientUI\UI\Wings\WingSide.cs" />
+    <Compile Include="KernellClientUI\Unity\ColorExtensions.cs" />
+    <Compile Include="KernellClientUI\Unity\EnableDisableListener.cs" />
+    <Compile Include="KernellClientUI\Unity\RenderObjectListener.cs" />
+    <Compile Include="KernellClientUI\Unity\UnityExtensions.cs" />
+    <Compile Include="KernellClientUI\VRChat\MenuEx.cs" />
+    <Compile Include="KernellClientUI\VRChat\MMenuPrefabs.cs" />
+    <Compile Include="KernellClientUI\VRChat\PlayerExtensions.cs" />
+    <Compile Include="KernellClientUI\VRChat\PopupManagerExtensions.cs" />
+    <Compile Include="KernellClientUI\VRChat\QMMenuPrefabs.cs" />
+    <Compile Include="KernellClientUI\VRChat\ReModPatches.cs" />
+    <Compile Include="KernellClientUI\VRChat\VRCConfig.cs" />
+    <Compile Include="KernellClientUI\VRChat\VRCUiManagerEx.cs" />
+    <Compile Include="KernellClientUI\XrefUtils.cs" />
+    <Compile Include="KernellVRC\InputBox.cs" />
+    <Compile Include="KernellVRC\MenuSetup.cs" />
+    <Compile Include="KernellVRC\Modules\BoxOutlineESP.cs" />
+    <Compile Include="KernellVRC\Modules\Exploits\InstanceHistoryModule.cs" />
+    <Compile Include="KernellVRC\Modules\PlayerBoxData.cs" />
+    <Compile Include="KernellVRC\modules\PlayerList.cs" />
+    <Compile Include="KernellVRC\modules\StatusPanel.cs" />
+    <Compile Include="KernellVRC\modules\TrustRank.cs" />
+    <Compile Include="KernellVRC\PopupManagerExtensions.cs" />
+    <Compile Include="KernellVRC\Utils\DrawingUtils.cs" />
+    <Compile Include="KernelVRC\CatagoryNames.cs" />
+    <Compile Include="KernelVRC\CategoryNames.cs" />
+    <Compile Include="KernelVRC\ClassicEmbeddedResourceLoader.cs" />
+    <Compile Include="KernelVRC\ComponentDisabled.cs" />
+    <Compile Include="KernelVRC\EmbeddedResourceLoader.cs" />
+    <Compile Include="KernelVRC\IKernelModule.cs" />
+    <Compile Include="KernelVRC\kernelllogger.cs" />
+    <Compile Include="KernelVRC\KernelModuleBase.cs" />
+    <Compile Include="KernelVRC\Loader.cs" />
+    <Compile Include="KernelVRC\MinimalModule.cs" />
+    <Compile Include="KernelVRC\ModuleCapabilities.cs" />
+    <Compile Include="KernelVRC\ModulePriority.cs" />
+    <Compile Include="KernelVRC\ModuleRegistry.cs" />
+    <Compile Include="KernelVRC\Modules\Exploits\Fly.cs" />
+    <Compile Include="KernelVRC\NetworkModule.cs" />
+    <Compile Include="KernelVRC\PageNames.cs" />
+    <Compile Include="KernelVRC\Patches.cs" />
+    <Compile Include="KernelVRC\Plugin.cs" />
+    <Compile Include="KernelVRC\UpdateFrequency.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Midi.cs" />
+    <Compile Include="modules\chatboxlagger.cs" />
+    <Compile Include="Modules\Exploits\LoudMicrophone.cs" />
+    <Compile Include="Modules\Exploits\Movement.cs" />
+    <Compile Include="modules\joinkrnluser.cs" />
+    <Compile Include="modules\LiveChat.cs" />
+    <Compile Include="Modules\Movement\InfiniteJumpModule.cs" />
+    <Compile Include="modules\SpinBot.cs" />
+    <Compile Include="Modules\Target\PlayerOrbit.cs" />
+    <Compile Include="Modules\Target\SitOn.cs" />
+    <Compile Include="Modules\Target\Teleport.cs" />
+    <Compile Include="modules\uimods\backgroundchange.cs" />
+    <Compile Include="modules\uimods\bgm.cs" />
+    <Compile Include="modules\uimods\KernellTextGlitch.cs" />
+    <Compile Include="modules\uimods\LaunchpadModule.cs" />
+    <Compile Include="modules\uimods\LaunchpadUIModifier.cs" />
+    <Compile Include="Modules\World\AmongUsKernel.cs" />
+    <Compile Include="Modules\World\Murder4Kernel.cs" />
+    <Compile Include="Network\KernellNetworkClient.cs" />
+    <Compile Include="Network\KernellNetworkIntegration.cs" />
+    <Compile Include="Network\KernellSocket.cs" />
+    <Compile Include="Network\NetworkStatus.cs" />
+    <Compile Include="Network\WebSocketFrame.cs" />
+    <Compile Include="OSC.cs" />
+    <Compile Include="OscBundle.cs" />
+    <Compile Include="OSCConfig.cs" />
+    <Compile Include="OscMessage.cs" />
+    <Compile Include="OscPacket.cs" />
+    <Compile Include="OtherUtil.cs" />
+    <Compile Include="player\Mono\CustomNameplateManager.cs" />
+    <Compile Include="PrisonEscape.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReWingMenu.cs" />
+    <Compile Include="RGBA.cs" />
+    <Compile Include="Settings\wrappers\VrcExtensions.cs" />
+    <Compile Include="Symbol.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableContextAttribute.cs" />
+    <Compile Include="Tags.cs" />
+    <Compile Include="TagsConfig.cs" />
+    <Compile Include="Timetag.cs" />
+    <Compile Include="ToastNotif.cs" />
+    <Compile Include="UDPSender.cs" />
+    <Compile Include="UIHelper.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Utils\Adblock.cs" />
+    <Compile Include="Utils\PlayerUtil.cs" />
+    <Compile Include="VRCApi\Mathfrep.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="assets\Amog.png" />
+    <EmbeddedResource Include="assets\Banner-NP-2025.png" />
+    <EmbeddedResource Include="assets\chaos.png" />
+    <EmbeddedResource Include="assets\config.png" />
+    <EmbeddedResource Include="assets\debug.png" />
+    <EmbeddedResource Include="assets\DxbcShaderFilter.dll" />
+    <EmbeddedResource Include="assets\EI.png" />
+    <EmbeddedResource Include="assets\ERI.png" />
+    <EmbeddedResource Include="assets\Ghost.png" />
+    <EmbeddedResource Include="assets\Gradient_DarkTeal_REPL.png" />
+    <EmbeddedResource Include="assets\Gradient_DarkTeal_REPL_Old.png" />
+    <EmbeddedResource Include="assets\guide.png" />
+    <EmbeddedResource Include="assets\IOI.png" />
+    <EmbeddedResource Include="assets\Kernel-icon-2025.png" />
+    <EmbeddedResource Include="assets\loading.wav" />
+    <EmbeddedResource Include="assets\Mainbg.png" />
+    <EmbeddedResource Include="assets\media-next.png" />
+    <EmbeddedResource Include="assets\media-play.png" />
+    <EmbeddedResource Include="assets\media-prev.png" />
+    <EmbeddedResource Include="assets\message.png" />
+    <EmbeddedResource Include="assets\message_notification.wav" />
+    <EmbeddedResource Include="assets\Movement.png" />
+    <EmbeddedResource Include="assets\Nightsky.png" />
+    <EmbeddedResource Include="assets\Nuclear_symbol.png" />
+    <EmbeddedResource Include="assets\OSC.png" />
+    <EmbeddedResource Include="assets\PD.png" />
+    <EmbeddedResource Include="assets\PlayerListIcon.png" />
+    <EmbeddedResource Include="assets\PLayer_List.png" />
+    <EmbeddedResource Include="assets\security.png" />
+    <EmbeddedResource Include="assets\sent.wav" />
+    <EmbeddedResource Include="assets\StatusPanelIcon.png" />
+    <EmbeddedResource Include="assets\Talker.png" />
+    <EmbeddedResource Include="assets\Test.png" />
+    <EmbeddedResource Include="assets\utility.png" />
+    <EmbeddedResource Include="assets\Visitor.png" />
+    <EmbeddedResource Include="assets\Visitor_2018.png" />
+    <EmbeddedResource Include="assets\Visitor_2018_blur.png" />
+    <EmbeddedResource Include="assets\welcome.wav" />
+    <EmbeddedResource Include="assets\worldcheat.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

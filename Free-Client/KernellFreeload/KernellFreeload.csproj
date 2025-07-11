@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6DA4B2C1-2622-481C-A023-9E4BBBE1936F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KernellVRCFL</RootNamespace>
+    <AssemblyName>KernellFreeload</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MelonLoader" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\9.0.6\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\_01Il1_lllO_1I010O11.cs" />
+    <Compile Include="Configuration\___1I_l_OI1__Il_01IO.cs" />
+    <Compile Include="Core\_010_111_0_llI1O_00I.cs" />
+    <Compile Include="Core\__Ill0__1__Ol__lIO__.cs" />
+    <Compile Include="KernellFreeLoad.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\_O0OI1Ol111_11OO_lIO.cs" />
+    <Compile Include="Utilities\_O_I_0llI_l1__l01I10.cs" />
+    <Compile Include="Utilities\__I_O_Il1_l1111OO_Il.cs" />
+    <Compile Include="_IOlOl_0I1__1Ol__0_l.cs" />
+    <Compile Include="_I_OIO_1__1lIO_0_IlO.cs" />
+    <Compile Include="_l_lI__0OOO0l__Ol1O0.cs" />
+    <Compile Include="_OO_l01__O_OlOl1_0__.cs" />
+    <Compile Include="_O__I10_11_I__I_0l1O.cs" />
+    <Compile Include="__0_1_O_I1O010I000II.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
